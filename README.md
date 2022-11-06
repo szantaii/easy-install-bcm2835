@@ -9,13 +9,13 @@ An easy-to-use “installer/uninstaller” for [Mike McCauley's bcm2835 C librar
 * [Prerequisites](#prerequisites)
 * [Usage](#usage)
 
-### About
+## About
 
 This project only provides an easy-to-use installer and uninstaller script for [Mike McCauley's bcm2835 C library for the Raspberry Pi](https://www.airspayce.com/mikem/bcm2835/).
 
 This project is meant to be used on [Raspberry Pi OS (32 or 64 bit)](https://www.raspberrypi.com/software/). It may work on other distributions but it is not guaranteed to do so.
 
-### License
+## License
 
 This project is licensed under the MIT License. For the full license, please see [`LICENSE`](LICENSE).
 
@@ -51,7 +51,7 @@ sudo apt-get install -y build-essential coreutils findutils tar wget
 
 [^1]: The `build-essential` package is a metapackage. It does not install anything by itself but rather depends on several other packages instead. These dependencies, which contain everything required to compile basic software written in C and C++, will be installed when the `build-essential` metapackage is installed.
 
-### Usage
+## Usage
 
 Clone or download this repository and run the following commands to get help, install/uninstall the bcm2835 library, or cleanup the bcm2835 library build directory.
 
