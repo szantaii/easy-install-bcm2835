@@ -11,9 +11,9 @@ An easy-to-use “installer/uninstaller” for [Mike McCauley's bcm2835 C librar
 
 ## About
 
-This project only provides an easy-to-use installer and uninstaller script for [Mike McCauley's bcm2835 C library for the Raspberry Pi](https://www.airspayce.com/mikem/bcm2835/).
+This project simply provides an easy-to-use installer and uninstaller script for [Mike McCauley's bcm2835 C library for the Raspberry Pi](https://www.airspayce.com/mikem/bcm2835/).
 
-This project is meant to be used on [Raspberry Pi OS (32 or 64 bit)](https://www.raspberrypi.com/software/). It may work on other distributions but it is not guaranteed to do so.
+This project was written to be used on [Raspberry Pi OS (32 or 64 bit)](https://www.raspberrypi.com/software/). It may work on other distributions but it is not guaranteed to do so.
 
 ## License
 
@@ -49,7 +49,7 @@ sudo apt-get update && \
 sudo apt-get install -y build-essential coreutils findutils tar wget
 ```
 
-[^1]: The `build-essential` package is a metapackage. It does not install anything by itself but rather depends on several other packages instead. These dependencies, which contain everything required to compile basic software written in C and C++, will be installed when the `build-essential` metapackage is installed.
+[^1]: The `build-essential` package is a metapackage. Its required dependencies are installed together with it. It does not install anything by itself. These dependencies, which contain everything required to compile basic software written in C and C++, will be installed when the `build-essential` metapackage is installed.
 
 ## Usage
 
@@ -57,7 +57,7 @@ Clone or download this repository and run the following commands to get help, in
 
 _Please note that some commands need `root` privileges, therefore you will need to run the script either with the `root` user or with a user which is a member of the `sudo` group._
 
-* Get help for using the script:
+* Get help to use the script:
 
   ```bash
   ./setup.sh -h
@@ -80,5 +80,7 @@ _Please note that some commands need `root` privileges, therefore you will need 
   ```bash
   ./setup.sh -c
   ```
+  
+  :exclamation::exclamation:__Watch out__:exclamation::exclamation:
 
-  _Please note that if you want to uninstall the bcm2835 library at some point, you will need to keep the contents of the build directory. If you cleanup the build directory, you will not be able to uninstall the library with this script._
+  _If you want to uninstall the bcm2835 library at some point, you will need to keep the contents of the build directory. If you cleanup the build directory, you will not be able to uninstall the library with this script._
